@@ -7,7 +7,7 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo">
+        <a class="main-header-logo" href="index.html">
           <img src="img/index-logo.svg" alt="Логотип сайта">
         </a>
         <ul class="site-navigation">
@@ -18,36 +18,76 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="container">
         <section class="filters">
           <!-- Здесь будет форма -->
+        </section>
+        <section class="search-results">
+          <span class="search-results-number">Найдено: 3</span>
+          <div class="sorting">
+            <ul class="sorting-options">
+              <li class="sopting-option">По цене</li>
+              <li class="sorting-option">По типу</li>
+              <li class="sorting-option">По рейтингу</li>
+            </ul>
+          </div>
         </section>
         <section class="catalog">
           <ul class="catalog-list">
             <li class="catalog-item">
-              <h3>Amara Resort & Spa</h3>
               <img src="img/Amara.jpg" alt="Amara Resort & Spa">
-              <span class="catalog-item-type">Гостиница</span>
-              <span class="catalog-item-price">от 4000 р.</span>
-              <a href="catalog-item.html">Подробнее</a>
-              <button type="button">Забронировать</button>
+              <div class="catalog-item-information">
+                <h3>Amara Resort & Spa</h3>
+                <p class="catalog-item-type-and-price">
+                  <span class="catalog-item-type">Гостиница</span>
+                  <span class="catalog-item-price">от 4000 р.</span>
+                </p>
+                <p class="catalog-item-details-and-booking">
+                  <a href="catalog-item.html">Подробнее</a>
+                  <button type="button">Забронировать</button>
+                </p>
+              </div>
+              <p class="catalog-item-rating">
+                <span class="catalog-item-rating-stars"></span>
+                <span class="catalog-item-rating-number">Рейтинг: 8,5</span>
+              </p>
             </li>
             <li class="catalog-item">
-              <h3>Desert Quail Inn</h3>
               <img src="img/Desert.jpg" alt="Desert Quail Inn">
-              <span class="catalog-item-type">Мотель</span>
-              <span class="catalog-item-price">от 3000 р.</span>
-              <a href="catalog-item.html">Подробнее</a>
-              <button type="button">Забронировать</button>
+              <div class="catalog-item-information">
+                <h3>Desert Quail Inn</h3>
+                <p class="catalog-item-type-and-price">
+                  <span class="catalog-item-type">Мотель</span>
+                  <span class="catalog-item-price">от 3000 р.</span>
+                </p>
+                <p class="catalog-item-details-and-booking">
+                  <a href="catalog-item.html">Подробнее</a>
+                  <button type="button">Забронировать</button>
+                </p>
+              </div>
+              <p class="catalog-item-rating">
+                <span class="catalog-item-rating-stars"></span>
+                <span class="catalog-item-rating-number">Рейтинг: 8,9</span>
+              </p>
             </li>
             <li class="catalog-item">
+              <img src="img/Villas.jpg" alt="Villas at Poco Diablo">
+              <div class="catalog-item-information">
                 <h3>Villas at Poco Diablo</h3>
-                <img src="img/Villas.jpg" alt="Villas at Poco Diablo">
-                <span class="catalog-item-type">Мотель</span>
-                <span class="catalog-item-price">от 2000 р.</span>
-                <a href="catalog-item.html">Подробнее</a>
-                <button type="button">Забронировать</button>
-              </li>
+                <p class="catalog-item-type-and-price">
+                  <span class="catalog-item-type">Мотель</span>
+                  <span class="catalog-item-price">от 2000 р.</span>
+                </p>
+                <p class="catalog-item-details-and-booking">
+                  <a href="catalog-item.html">Подробнее</a>
+                  <button type="button">Забронировать</button>
+                </p>
+              </div>
+              <p class="catalog-item-rating">
+                <span class="catalog-item-rating-stars"></span>
+                <span class="catalog-item-rating-number">Рейтинг: 9,2</span>
+              </p>
+            </li>
           </ul>
         </section>
     </main>
