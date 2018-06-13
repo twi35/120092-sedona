@@ -19,6 +19,7 @@
       </nav>
     </header>
     <main class="container">
+        <h1 class="visually-hidden">Седона</h1>
       <section class="welcome">
         <img src="img/welcome.jpg" width="1200" height="780" alt="Седона">
       </section>
@@ -76,10 +77,30 @@
         <h2>Заинтересовались?</h2>
         <p class="search-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button type="button">Поиск гостиницы в Седоне</button>
-        <!-- Здесь будет форма -->
+      </section>
+      <section class="modal-search">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <p class="search-form-item">
+            <label for="arr-date">Дата заезда</label>
+            <input type="text" name="arrival-date" placeholder="24 апреля 2017" id="arr-date">
+          </p>
+          <p class="search-form-item">
+            <label for="dep-date">Дата выезда</label>
+            <input type="text" name="departure-date" placeholder="4 июля 2017" id="dep-date">
+          </p>
+          <p class="search-form-item">
+            <label for="adl-number">Взрослые:</label>
+            <input type="number" name="adults-number" min="1" max="10" step="1" value="2" id="adl-number">
+          </p>
+          <p class="search-form-item">
+            <label for="chd-number">Дети:</label>
+            <input type="number" name="children-number" min="0" max="10" step="1" value="0" id="chd-number">
+          </p>
+          <a href="inner.html">Найти</a>
+        </form>
       </section>
       <section class="main-map">
-        <img src="img/map.png" width="1200" height="593" alt="Карта">
+        <img src="img/map.png" width="1200" height="593" alt="Город Седона на карте">
       </section>
     </main>
     <footer class="main-footer">

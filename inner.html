@@ -20,20 +20,74 @@
     </header>
     <main class="container">
         <section class="filters">
-          <!-- Здесь будет форма -->
+          <h2 class="visually-hidden">Фильтр гостиниц</h2>
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input type="checkbox" name="swimming-pool" checked class="filter-input filter-input-checkbox" id="filter-swimming-pool">
+                  <label for="filter-swimming-pool">Бассейн</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="parking" class="filter-input filter-input-checkbox" id="filter-parking">
+                  <label for="filter-parking">Парковка</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="wi-fi" class="filter-input filter-input-checkbox" id="filter-wi-fi">
+                  <label for="filter-wi-fi">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input type="checkbox" name="hotel" checked class="filter-input filter-input-checkbox" id="filter-hotel">
+                  <label for="filter-hotel">Гостиница</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="motel" checked class="filter-input filter-input-checkbox" id="filter-motel">
+                  <label for="filter-motel">Мотель</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="apartments" checked class="filter-input filter-input-checkbox" id="filter-apartments">
+                  <label for="filter-apartments">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Стоимость в сутки (Р):</legend>
+              <input type="range" min="0" max="3000" step="100" value="2500">
+            </fieldset>
+            <button type="submit" class="filter-button">Показать</button>
+          </form>
         </section>
         <section class="search-results">
           <span class="search-results-number">Найдено: 3</span>
           <div class="sorting">
+            <h3>Сортировка:</h3>
             <ul class="sorting-options">
-              <li class="sopting-option">По цене</li>
-              <li class="sorting-option">По типу</li>
-              <li class="sorting-option">По рейтингу</li>
+              <li class="sorting-option">
+                <button type="button" class="sorting-button">По цене</button>
+              </li>
+              <li class="sorting-option">
+                <button type="button" class="sorting-button">По типу</button>
+              </li>
+              <li class="sorting-option">
+                <button type="button" class="sorting-button">По рейтингу</button>
+              </li>
             </ul>
           </div>
           <div class="sorting-directions">
-            <span class="sorting-direction-up"></span>
-            <span class="sorting-direction-down"></span>
+            <ul>
+              <li class="sorting-direction">
+                <button type="button" class="sorting-direction-up">По возрастанию</button>
+              </li>
+              <li class="sorting-direction">
+                <button type="button" class="sorting-direction-down">По убыванию</button>
+              </li>
+            </ul>
           </div>
         </section>
         <section class="catalog">
