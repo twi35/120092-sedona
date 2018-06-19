@@ -25,6 +25,11 @@ a {
   background-color: #ffffff;
 }
 
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .site-navigation a {
   color: #000000;
 }
@@ -39,14 +44,14 @@ a {
   opacity: 0.3;
 }
 
-.site-navigation a:visited {
-  color: #766357
+.site-navigation-current a {
+  color: #766357;
 }
 
 .features {
   text-align: center;
   background-color: #ffffff;
-  background-image: url("img/shaped-background.png");
+  background-image: url("../img/shaped-background.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -221,7 +226,7 @@ a {
 }
 
 .filters {
-  background-image: url("img/filter-background.jpg");
+  background-image: url("../img/filter-background.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-color: #3c6487;
