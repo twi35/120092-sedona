@@ -13,7 +13,7 @@
         <a class="main-header-logo" href="index.html">
           <img src="img/index-logo.png" width="138" height="70" alt="Логотип сайта">
         </a>
-        <ul class="site-navigation">
+        <ul class="site-navigation list-reset">
           <li>
             <a href="info.html">Информация</a>
           </li>
@@ -24,7 +24,7 @@
             <a href="map.html">Карта штата</a>
           </li>
           <li>
-            <a href="inner.html">Гостиницы</a>
+            <a href="inner.html" class="current">Гостиницы</a>
           </li>
         </ul>
       </header>
@@ -32,9 +32,9 @@
         <section class="filters">
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset>
+            <fieldset class="checkboxes">
               <legend>Инфраструктура:</legend>
-              <ul>
+              <ul class="list-reset">
                 <li class="filter-option">
                   <input type="checkbox" name="swimming-pool" checked class="filter-input filter-input-checkbox" id="filter-swimming-pool">
                   <label for="filter-swimming-pool">Бассейн</label>
@@ -49,9 +49,9 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="checkboxes">
               <legend>Тип жилья:</legend>
-              <ul>
+              <ul class="list-reset">
                 <li class="filter-option">
                   <input type="checkbox" name="hotel" checked class="filter-input filter-input-checkbox" id="filter-hotel">
                   <label for="filter-hotel">Гостиница</label>
@@ -66,11 +66,23 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+              <div class="filter-range">
               <legend>Стоимость в сутки (Р):</legend>
-              <input type="range" min="0" max="3000" step="100" value="2500">
-            </fieldset>
+              <!-- <input type="range" min="0" max="3000" step="100" value="2500"> -->
+              <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+              </div>
+              <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar">
+                    </div>
+                    <div class="range-toggle range-toggle-min"></div>
+                    <div class="range-toggle range-toggle-max"></div>
+                  </div>
+              </div>
             <button type="submit" class="filter-button">Показать</button>
+            </div>
           </form>
         </section>
         <section class="search-results">
@@ -79,7 +91,7 @@
             <h3>Сортировка:</h3>
             <ul class="sorting-options">
               <li class="sorting-option">
-                <span class="sorting-button" tabindex="0">По цене</span>
+                <span class="sorting-button active" tabindex="0">По цене</span>
               </li>
               <li class="sorting-option">
                 <span class="sorting-button" tabindex="0">По типу</span>
@@ -91,15 +103,17 @@
           </div>
           <ul class="sorting-directions">
             <li class="sorting-direction">
-              <span class="sorting-direction-up" tabindex="0">По возрастанию</span>
+              <span class="direction direction-up" tabindex="0">По возрастанию</span>
+              <span></span>
             </li>
             <li class="sorting-direction">
-              <span class="sorting-direction-down" tabindex="0">По убыванию</span>
+              <span class="direction direction-down" tabindex="0">По убыванию</span>
+              <span></span>
             </li>
           </ul>
         </section>
         <section class="catalog">
-          <ul class="catalog-list">
+          <ul class="catalog-list list-reset">
             <li class="catalog-item">
               <div class="catalog-image">
                 <img src="img/Amara.jpg" width="135" height="90" alt="Amara Resort &#38; Spa">
@@ -117,10 +131,15 @@
                   <button type="button">Забронировать</button>
                 </p>
               </div>
-              <p class="item-rating">
-                <span class="catalog-item-rating-stars"></span>
-                <span class="catalog-item-rating-number">Рейтинг: 8,5</span>
-              </p>
+              <div class="item-rating">
+                <div class="rating-stars">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="rating-number">Рейтинг: 8,5</span>
+              </div>
             </li>
             <li class="catalog-item">
               <div class="catalog-image">
@@ -139,10 +158,14 @@
                   <button type="button">Забронировать</button>
                 </p>
               </div>
-              <p class="item-rating">
-                <span class="catalog-item-rating-stars"></span>
-                <span class="catalog-item-rating-number">Рейтинг: 8,9</span>
-              </p>
+              <div class="item-rating">
+                <div class="rating-stars">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="rating-number">Рейтинг: 8,9</span>
+              </div>
             </li>
             <li class="catalog-item">
               <div class="catalog-image">
@@ -153,7 +176,7 @@
                   <a href="catalog-item.html">Villas at Poco Diablo</a>
                 </h3>
                 <p class="catalog-item-type-and-price">
-                  <span class="catalog-item-type">Мотель</span>
+                  <span class="catalog-item-type">Апартаменты</span>
                   <span class="catalog-item-price">от 2000 р.</span>
                 </p>
                 <p class="details-and-booking">
@@ -161,10 +184,13 @@
                   <button type="button">Забронировать</button>
                 </p>
               </div>
-              <p class="item-rating">
-                <span class="catalog-item-rating-stars"></span>
-                <span class="catalog-item-rating-number">Рейтинг: 9,2</span>
-              </p>
+              <div class="item-rating">
+                <div class="rating-stars">
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="rating-number">Рейтинг: 9,2</span>
+              </div>
             </li>
           </ul>
         </section>
@@ -174,13 +200,15 @@
         <div class="footer-socials">
           <ul>
             <li>
-              <a class="social-button" href="#">Twitter</a>
+              <a class="social-button" href="#"><span class="visually-hidden">Twitter</span>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg></a>
             </li>
             <li>
-              <a class="social-button" href="#">Facebook</a>
+              <a class="social-button" href="#"><span class="visually-hidden">Facebook</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg></a>
             </li>
             <li>
-              <a class="social-button" href="#">Youtube</a>
+              <a class="social-button" href="#"><span class="visually-hidden">Youtube</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg></a>
             </li>
           </ul>
         </div>
